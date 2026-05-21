@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy &middot; House Conservatives</title>
+    <meta name="description" content="Privacy policy for House Conservatives website and services. Learn how we collect, use, and protect your personal information.">
+    <link rel="canonical" href="https://house-conservatives.com/privacy/">
+
+    <meta property="og:title" content="Privacy Policy &middot; House Conservatives">
+    <meta property="og:description" content="Privacy policy for House Conservatives website and services.">
+    <meta property="og:url" content="https://house-conservatives.com/privacy/">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+    <style>
+        :root {
+            --red: #ff0000;
+            --red-dark: #cc0000;
+            --navy: #0000ff;
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-900: #111827;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Georgia, serif;
+            background: var(--white);
+            color: var(--gray-900);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 2px;
+        }
+
+        /* Header */
+        .doc-header {
+            border-bottom: 1px solid var(--gray-200);
+            padding: 3rem 2rem 3rem;
+        }
+
+        .doc-header-inner {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--navy);
+            margin-bottom: 2.5rem;
+        }
+
+        .breadcrumb a {
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        .breadcrumb .sep { color: var(--gray-300); margin: 0 0.5rem; }
+        .breadcrumb .current { color: var(--gray-600); }
+
+        .eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--red);
+            margin-bottom: 0.5rem;
+        }
+
+        .eyebrow-rule {
+            display: block;
+            width: 3rem;
+            height: 2px;
+            background: var(--red);
+            margin: 0.75rem 0 1.5rem;
+        }
+
+        .doc-effective {
+            font-size: 0.9375rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+
+        .doc-title {
+            font-family: Georgia, serif;
+            font-weight: 700;
+            font-size: 2.75rem;
+            line-height: 1.05;
+            color: var(--gray-900);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.01em;
+        }
+
+        .doc-deck {
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            line-height: 1.4;
+            color: var(--gray-700);
+            max-width: 38rem;
+        }
+
+        /* Body */
+        main {
+            flex: 1;
+            padding: 3rem 2rem 4rem;
+        }
+
+        .doc-body {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        section.block { margin-bottom: 3rem; }
+
+        .label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--red);
+            margin-bottom: 0.875rem;
+        }
+
+        h2.section-h {
+            font-family: Georgia, serif;
+            font-weight: 700;
+            font-size: 1.375rem;
+            line-height: 1.25;
+            color: var(--gray-900);
+            margin-bottom: 1.25rem;
+        }
+
+        p.body, .body p {
+            font-family: Georgia, serif;
+            font-size: 1.0625rem;
+            line-height: 1.65;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+
+        p.body:last-child, .body p:last-child { margin-bottom: 0; }
+
+        .callout {
+            border-left: 3px solid var(--red);
+            padding: 0.25rem 0 0.25rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .callout-title {
+            font-family: Georgia, serif;
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .callout p {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: var(--gray-700);
+        }
+
+        /* Table */
+        .table-wrap {
+            border: 1px solid var(--gray-200);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Georgia, serif;
+        }
+
+        thead tr {
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        th {
+            text-align: left;
+            padding: 1rem;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray-900);
+        }
+
+        td {
+            padding: 1rem;
+            font-size: 0.9375rem;
+            color: var(--gray-700);
+            border-bottom: 1px solid var(--gray-200);
+            vertical-align: top;
+        }
+
+        td.cat { font-weight: 700; color: var(--gray-900); }
+
+        tbody tr:last-child td { border-bottom: 0; }
+
+        /* Grid of cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 640px) {
+            .card-grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            border: 1px solid var(--gray-200);
+            padding: 1.125rem 1.25rem;
+            background: var(--white);
+        }
+
+        .card-title {
+            font-family: Georgia, serif;
+            font-weight: 700;
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--gray-900);
+            margin-bottom: 0.375rem;
+        }
+
+        .card p {
+            font-size: 0.9375rem;
+            line-height: 1.55;
+            color: var(--gray-700);
+        }
+
+        /* Links inline */
+        .doc-body a {
+            color: var(--navy);
+            text-decoration: underline;
+        }
+
+        .doc-body a:hover {
+            color: var(--red);
+        }
+
+        /* CTAs */
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-block;
+            font-family: Georgia, serif;
+            font-weight: 700;
+            font-size: 0.9375rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            border: 1px solid var(--gray-300);
+            color: var(--gray-900);
+            background: var(--white);
+            transition: background 0.15s, color 0.15s, border-color 0.15s;
+        }
+
+        .btn:hover {
+            border-color: var(--gray-900);
+            color: var(--gray-900);
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: var(--white);
+            border-color: var(--red);
+        }
+
+        .btn-primary:hover {
+            background: var(--red-dark);
+            border-color: var(--red-dark);
+            color: var(--white);
+        }
+
+        .end-divider {
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-50);
+            border-top: 1px solid var(--gray-200);
+            padding: 2rem;
+        }
+
+        .footer-inner { max-width: 1000px; margin: 0 auto; }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--gray-900);
+            text-decoration: underline;
+        }
+
+        .fec-disclaimer-box {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            padding: 0.875rem 1rem;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            color: var(--gray-700);
+            text-align: center;
+        }
+
+        .fec-disclaimer-extra {
+            margin-top: 1rem;
+            font-size: 0.75rem;
+            line-height: 1.6;
+            color: var(--gray-600);
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            .doc-header { padding: 2.5rem 1.5rem; }
+            main { padding: 2rem 1.5rem 3rem; }
+            .doc-title { font-size: 2rem; }
+            .doc-deck { font-size: 1.125rem; }
+            .footer-links { flex-direction: column; gap: 0.75rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header class="doc-header">
+        <div class="doc-header-inner">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a><span class="sep">/</span><span class="current">Privacy</span>
+            </nav>
+            <div class="eyebrow">Legal &middot; Privacy</div>
+            <span class="eyebrow-rule" aria-hidden="true"></span>
+            <p class="doc-effective">Effective May 20, 2026.</p>
+            <h1 class="doc-title">Privacy Summary.</h1>
+            <p class="doc-deck">How we collect, use, and protect your personal information &mdash; in plain language.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="doc-body">
+
+            <section class="block">
+                <p class="label">Overview</p>
+                <div class="body">
+                    <p>House Conservatives (FEC ID #C00695981) is a Hybrid PAC dedicated to organizing grassroots Republicans and defending the House majority by funding the candidates and operations that keep it intact. We value your privacy and are committed to protecting your personal information.</p>
+                </div>
+
+                <div class="callout">
+                    <p class="callout-title">Privacy-First Approach</p>
+                    <p>We protect your personal information through industry-standard security measures. Your data is used for legitimate operational purposes, and we implement appropriate safeguards. Mobile data is especially protected under A2P and 10DLC regulations.</p>
+                </div>
+            </section>
+
+            <section class="block">
+                <p class="label">Information We Collect</p>
+                <h2 class="section-h">Personal Information Categories (CCPA/CPRA)</h2>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Examples</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cat">Identifiers</td>
+                                <td>Name, email, phone, address, IP</td>
+                                <td>Service delivery, communications</td>
+                            </tr>
+                            <tr>
+                                <td class="cat">Commercial</td>
+                                <td>Donation history, preferences</td>
+                                <td>Payment processing, compliance</td>
+                            </tr>
+                            <tr>
+                                <td class="cat">Internet Activity</td>
+                                <td>Browser info, usage data, cookies</td>
+                                <td>Security, analytics</td>
+                            </tr>
+                            <tr>
+                                <td class="cat">Geolocation</td>
+                                <td>General location from IP</td>
+                                <td>Security, targeting</td>
+                            </tr>
+                            <tr>
+                                <td class="cat">Professional</td>
+                                <td>Employment, political preferences</td>
+                                <td>Targeting, communications</td>
+                            </tr>
+                            <tr>
+                                <td class="cat">Mobile (SMS)</td>
+                                <td>Phone number, opt-in consent</td>
+                                <td>Service communications only</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!--
+              Mobile / SMS section uses forward-looking language because House Conservatives
+              does not yet have a CTIA-registered shortcode. We collect TCPA-compliant
+              consent now so numbers backfill into the program when it launches.
+            -->
+            <section class="block">
+                <p class="label">Mobile Data Protection</p>
+                <div class="body">
+                    <p>By providing your mobile number, you consent to receive text messages from House Conservatives. We are currently establishing our SMS program; when our program launches, message frequency will vary and you may receive recurring messages related to our work. Message and data rates may apply. You can opt out at any time by replying STOP, and reply HELP for help.</p>
+                </div>
+
+                <div class="card-grid" style="margin-top: 1.25rem;">
+                    <div class="card">
+                        <p class="card-title">No Sale of Mobile Data</p>
+                        <p>In compliance with A2P and 10DLC regulations, your mobile phone number will <strong>not be sold, shared, or rented to third parties</strong> for marketing or promotional purposes.</p>
+                    </div>
+                    <div class="card">
+                        <p class="card-title">Opt-In Consent</p>
+                        <p>By opting in to text messaging, you consent to receive recurring messages from House Conservatives once our SMS program launches. Opt out anytime by replying STOP or contacting <a href="mailto:contact@house-conservatives.com">contact@house-conservatives.com</a>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block">
+                <p class="label">How We Protect Your Data</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <p class="card-title">SSL Encryption</p>
+                        <p>All data transmission is encrypted.</p>
+                    </div>
+                    <div class="card">
+                        <p class="card-title">Secure Storage</p>
+                        <p>Industry-standard security measures.</p>
+                    </div>
+                    <div class="card">
+                        <p class="card-title">Access Controls</p>
+                        <p>Multi-factor authentication required.</p>
+                    </div>
+                    <div class="card">
+                        <p class="card-title">Regular Audits</p>
+                        <p>Security assessments and reviews.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block">
+                <p class="label">Your Privacy Rights</p>
+                <h2 class="section-h">California Consumer Privacy Rights (CCPA/CPRA)</h2>
+                <div class="card-grid" style="margin-bottom: 1.5rem;">
+                    <div class="card">
+                        <p class="card-title">Right to Know</p>
+                        <p>Request information about what we collect, use, and share.</p>
+                    </div>
+                    <div class="card">
+                        <p class="card-title">Right to Delete</p>
+                        <p>Request deletion of your personal information.</p>
+                    </div>
+                    <div class="card">
+                        <p class="card-title">Right to Correct</p>
+                        <p>Request correction of inaccurate information.</p>
+                    </div>
+                    <div class="card">
+                        <p class="card-title">Right to Portability</p>
+                        <p>Obtain a copy in a portable format.</p>
+                    </div>
+                    <div class="card">
+                        <p class="card-title">Right to Opt-Out</p>
+                        <p>Opt out of sale/sharing of personal information.</p>
+                    </div>
+                    <div class="card">
+                        <p class="card-title">Non-Discrimination</p>
+                        <p>No discriminatory treatment for exercising rights.</p>
+                    </div>
+                </div>
+
+                <div class="callout">
+                    <p class="callout-title">How to Exercise Your Rights</p>
+                    <p>Contact us directly to exercise any of your privacy rights. We will respond in accordance with applicable laws.</p>
+                    <p style="margin-top: 0.75rem;"><strong>Acknowledgment:</strong> within 10 business days. <strong>Response:</strong> within 45 days (may extend to 90 for complex requests).</p>
+                </div>
+            </section>
+
+            <section class="block">
+                <p class="label">Contact Information</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <p class="card-title">Privacy Inquiries</p>
+                        <p><a href="mailto:contact@house-conservatives.com">contact@house-conservatives.com</a></p>
+                    </div>
+                    <div class="card">
+                        <p class="card-title">General Support</p>
+                        <p><a href="mailto:contact@house-conservatives.com">contact@house-conservatives.com</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="end-divider">
+                <p class="label" style="color: var(--gray-600);">Need More Detail?</p>
+                <div class="body">
+                    <p>For comprehensive legal information, detailed regulatory compliance, data retention policies, and complete privacy rights details.</p>
+                </div>
+                <div class="cta-row" style="margin-top: 1rem;">
+                    <a href="/privacy/full-policy/" class="btn">View full privacy policy &rarr;</a>
+                    <a href="/terms/" class="btn">Terms of service</a>
+                    <a href="https://secure.winred.com/house-conservatives/" class="btn btn-primary" target="_blank" rel="noopener">Contribute &rarr;</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <nav class="footer-links">
+                <a href="/privacy/">Privacy Policy</a>
+                <a href="/terms/">Terms of Service</a>
+                <a href="https://www.fec.gov/data/committee/C00695981/" target="_blank" rel="noopener">FEC Filings</a>
+            </nav>
+
+            <div class="fec-disclaimer-box">
+                Paid for by House Conservatives, PO Box 133, Wake Forest, NC 27588. Not authorized by any candidate or candidate's committee.
+            </div>
+
+            <p class="fec-disclaimer-extra">
+                Contributions are not tax-deductible. Federal law requires us to use our best efforts to collect and report the name, mailing address, occupation, and employer of individuals whose contributions exceed $200 in a calendar year.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
