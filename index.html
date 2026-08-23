@@ -10,214 +10,247 @@
     <meta property="og:description" content="House Conservatives funds the candidates and operations that keep a Republican House majority.">
     <meta property="og:url" content="https://house-conservatives.com">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://house-conservatives.com/assets/hc-crest.png">
 
     <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
     <style>
         :root {
-            --red: #ff0000;
-            --navy: #0000ff;
-            --white: #FFFFFF;
-            --gray-50: #F9FAFB;
-            --gray-200: #E5E7EB;
-            --gray-600: #4B5563; /* WCAG AA compliant on white - 7.0:1 */
-            --gray-700: #374151;
-            --gray-900: #111827;
+            /* Sampled from the client-provided 2025 crest, not invented.
+               The prior site shipped #ff0000 / #0000ff — placeholder primaries. */
+            --navy: #352E4E;
+            --navy-deep: #241F38;
+            --red: #B53134;
+            --red-dark: #8A2427;
+            --alarm: #D64A4D;
+            --paper: #FFFFFF;
+            --tint: #FBFAF8;   /* warm near-white, used only as a quiet band */
+            --ink: #111111;
+            --slate: #4A4658;
+            --rule: #E3E0DC;
+
+            /* Brand faces. Georgia belonged to a sibling committee, not to HC. */
+            --display: "Arial Black", "Arial Bold", "Helvetica Neue", Arial, sans-serif;
+            --body: Tahoma, Geneva, Verdana, sans-serif;
+            --filing: "Courier New", Courier, monospace;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: Georgia, serif;
-            background: var(--white);
-            color: var(--gray-900);
+            font-family: var(--body);
+            background: var(--paper);
+            color: var(--ink);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             font-size: 16px;
             line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Focus states for accessibility */
-        a:focus-visible,
-        button:focus-visible {
-            outline: 2px solid var(--red);
-            outline-offset: 2px;
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--navy);
+            outline-offset: 3px;
         }
 
-        /* Main */
+        /* ---- Masthead: the client's own crest + wordmark lockup ---- */
+        .masthead {
+            padding: 2rem 1.5rem 1.75rem;
+            text-align: center;
+        }
+
+        .masthead img {
+            width: 108px;
+            height: auto;
+            display: block;
+            margin: 0 auto 0.875rem;
+        }
+
+        /* The wordmark is set as live type rather than shipped as the client's
+           lockup PNG: that file carries a 27%-alpha Capitol photo across its full
+           canvas, which renders as a grey box on any background. Setting it in the
+           brand display face reproduces the two-tone split crisply at every size —
+           and makes the split a reusable device rather than a baked image. */
+        .wordmark {
+            font-family: var(--display);
+            font-size: clamp(1.25rem, 3.4vw, 1.875rem);
+            letter-spacing: 0.02em;
+            line-height: 1;
+            color: var(--navy);
+        }
+
+        .wordmark .hot { color: var(--red); }
+
+        /* The alarm line. HC's register is CODE RED — the rule is the alarm,
+           not decoration, so it runs full bleed and appears exactly twice. */
+        .alarm-rule {
+            height: 4px;
+            background: var(--red);
+            width: 100%;
+        }
+
+        /* ---- Message ---- */
         main {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 4rem 2rem;
+            padding: 4rem 1.5rem 4.5rem;
             text-align: center;
         }
 
-        .wordmark {
-            font-family: Georgia, serif;
-            font-weight: 700;
-            font-size: 2rem;
-            color: var(--navy);
-            margin-bottom: 2rem;
-            line-height: 1.1;
-        }
-
         h1 {
-            font-family: Georgia, serif;
-            font-size: 1.625rem;
-            font-weight: 700;
-            color: var(--gray-900);
-            margin-bottom: 1rem;
+            font-family: var(--display);
+            font-size: clamp(1.6875rem, 4vw, 2.625rem);
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            color: var(--navy);
+            max-width: min(22ch, 100%);
+            text-wrap: balance;
         }
 
-        .tagline {
-            font-family: Georgia, serif;
+        /* Echoes the lockup's own two-tone split (navy HOUSE / red CONSERVATIVES). */
+        h1 .hot { color: var(--red); }
+
+        .stub {
+            width: 2.75rem;
+            height: 4px;
+            background: var(--alarm);
+            margin: 1.75rem auto 1.5rem;
+        }
+
+        .lede {
             font-size: 1.0625rem;
-            color: var(--gray-700);
-            max-width: 560px;
-            line-height: 1.6;
-            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: var(--slate);
+            max-width: min(46ch, 100%);
+            margin-bottom: 2.5rem;
+            text-wrap: pretty;
         }
 
-        .tagline + .tagline {
-            margin-bottom: 2rem;
-        }
+        .lede strong { color: var(--ink); font-weight: 700; }
 
-        .tagline a {
-            color: var(--gray-700);
-            text-decoration: underline;
-        }
-
-        .tagline a:hover {
-            color: var(--gray-900);
-        }
-
-        .btn-donate {
+        .btn {
             display: inline-block;
+            font-family: var(--display);
+            font-size: 1.0625rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
             background: var(--red);
-            color: var(--white);
-            padding: 0.875rem 2rem;
-            font-size: 1rem;
-            font-weight: 700;
+            color: #fff;
             text-decoration: none;
-            border-radius: 4px;
-            transition: background 0.15s;
-            font-family: Georgia, serif;
+            padding: 1.0625rem 3rem;
+            border-bottom: 4px solid var(--red-dark);
+            transition: background .15s ease, transform .15s ease;
         }
 
-        .btn-donate:hover,
-        .btn-donate:focus {
-            background: #cc0000;
+        .btn:hover { background: var(--red-dark); transform: translateY(1px); border-bottom-width: 3px; }
+
+        .secure {
+            margin-top: 1rem;
+            font-size: 0.8125rem;
+            color: #6C6878;
         }
 
-        /* Footer */
+        /* ---- Footer ---- */
         footer {
-            background: var(--gray-50);
-            border-top: 1px solid var(--gray-200);
-            padding: 2rem;
+            background: var(--navy);
+            color: #CFCBDA;
+            padding: 2.5rem 1.5rem 2.75rem;
         }
 
-        .footer-inner {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+        .footer-inner { max-width: 940px; margin: 0 auto; }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            gap: 2rem;
             flex-wrap: wrap;
+            margin-bottom: 1.75rem;
         }
 
         .footer-links a {
-            color: var(--gray-700);
+            font-family: var(--display);
+            font-size: 0.75rem;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: #fff;
             text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 500;
+            padding-bottom: 3px;
+            border-bottom: 2px solid transparent;
         }
 
-        .footer-links a:hover {
-            color: var(--gray-900);
-            text-decoration: underline;
-        }
+        .footer-links a:hover { border-bottom-color: var(--alarm); }
 
-        .project-of {
-            text-align: center;
-            font-size: 0.875rem;
-            color: var(--gray-600);
-            margin-bottom: 1.5rem;
-        }
-
-        .project-of a {
-            color: var(--gray-700);
-            text-decoration: none;
-        }
-
-        .project-of a:hover {
-            text-decoration: underline;
-        }
-
-        .fec-disclaimer-box {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            padding: 0.875rem 1rem;
-            font-size: 0.75rem; /* 12px */
-            line-height: 1.5;
-            color: var(--gray-700);
-            text-align: center;
-        }
-
-        .fec-disclaimer-extra {
-            margin-top: 1rem;
+        .paid-for {
+            font-family: var(--filing);
             font-size: 0.75rem;
             line-height: 1.6;
-            color: var(--gray-600);
+            color: #fff;
             text-align: center;
+            border: 1px solid rgba(255,255,255,.28);
+            padding: 0.875rem 1rem;
+            max-width: min(680px, 100%);
+            margin: 0 auto;
         }
 
-        /* Mobile */
+        .fine {
+            margin-top: 1.25rem;
+            font-size: 0.75rem;
+            line-height: 1.65;
+            text-align: center;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         @media (max-width: 640px) {
-            main { padding: 3rem 1.5rem; }
-            .wordmark { font-size: 1.5rem; }
-            h1 { font-size: 1.375rem; }
-            .footer-links { flex-direction: column; gap: 0.75rem; text-align: center; }
+            .masthead { padding: 1.5rem 1.25rem 1.25rem; }
+            main { padding: 3rem 1.25rem 3.5rem; }
+            .footer-links { gap: 1.25rem; }
+            .btn { padding: 1rem 2.25rem; width: 100%; max-width: 320px; }
         }
     </style>
 </head>
 <body>
+    <header class="masthead">
+        <img src="assets/hc-crest.png" alt="" role="presentation">
+        <div class="wordmark">HOUSE <span class="hot">CONSERVATIVES</span></div>
+    </header>
+    <div class="alarm-rule" role="presentation"></div>
+
     <main>
-        <div class="wordmark">House Conservatives</div>
-        <h1>The House majority is the foundation of every Republican win.</h1>
-        <p class="tagline">
-            Without it, the Trump agenda dies in committee. House Conservatives funds the candidates and operations that keep the Republican majority intact.
+        <h1>The House majority is the foundation of <span class="hot">every Republican win</span>.</h1>
+        <div class="stub" role="presentation"></div>
+        <p class="lede">
+            Without it, the Trump agenda dies in committee. House&nbsp;Conservatives funds the
+            candidates and operations that <strong>keep the Republican majority intact</strong>.
         </p>
-        <p class="tagline">
-            Contribute below to defend the House.
-        </p>
-        <a href="https://secure.winred.com/house-conservatives/" class="btn-donate">
-            Contribute
-        </a>
+        <a class="btn" href="https://secure.winred.com/house-conservatives/">Contribute</a>
+        <p class="secure">Processed securely through WinRed.</p>
     </main>
 
+    <div class="alarm-rule" role="presentation"></div>
     <footer>
         <div class="footer-inner">
-            <nav class="footer-links">
+            <nav class="footer-links" aria-label="Footer">
                 <a href="/privacy/">Privacy Policy</a>
                 <a href="/terms/">Terms of Service</a>
                 <a href="https://www.fec.gov/data/committee/C00695981/" target="_blank" rel="noopener">FEC Filings</a>
             </nav>
 
-            <div class="fec-disclaimer-box">
-                Paid for by House Conservatives, PO Box 133, Wake Forest, NC 27588. Not authorized by any candidate or candidate's committee.
-            </div>
+            <p class="paid-for">
+                Paid for by House Conservatives, PO Box 133, Wake Forest, NC 27588.
+                Not authorized by any candidate or candidate&rsquo;s committee.
+            </p>
 
-            <p class="fec-disclaimer-extra">
-                Contributions are not tax-deductible. Federal law requires us to use our best efforts to collect and report the name, mailing address, occupation, and employer of individuals whose contributions exceed $200 in a calendar year.
+            <p class="fine">
+                Contributions are not tax-deductible. Federal law requires us to use our best efforts
+                to collect and report the name, mailing address, occupation, and employer of individuals
+                whose contributions exceed $200 in a calendar year.
             </p>
         </div>
     </footer>

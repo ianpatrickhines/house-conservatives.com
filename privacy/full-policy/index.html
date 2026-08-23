@@ -17,9 +17,11 @@
 
     <style>
         :root {
-            --red: #ff0000;
-            --red-dark: #cc0000;
-            --navy: #0000ff;
+            --red: #B53134;
+            --alarm: #D64A4D;
+            --display: "Arial Black", "Arial Bold", "Helvetica Neue", Arial, sans-serif;
+            --red-dark: #8A2427;
+            --navy: #352E4E;
             --white: #FFFFFF;
             --gray-50: #F9FAFB;
             --gray-100: #F3F4F6;
@@ -33,7 +35,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: Georgia, serif;
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
             background: var(--white);
             color: var(--gray-900);
             min-height: 100vh;
@@ -48,6 +50,20 @@
             outline: 2px solid var(--red);
             outline-offset: 2px;
         }
+
+        /* ---- Masthead, matching the homepage so legal pages carry the brand ---- */
+        .masthead { padding: 1.75rem 1.5rem 1.5rem; text-align: center; }
+        .masthead-link { text-decoration: none; display: inline-block; }
+        .masthead img { width: 76px; height: auto; display: block; margin: 0 auto 0.75rem; }
+        .wordmark {
+            font-family: var(--display);
+            font-size: clamp(1.125rem, 3vw, 1.5rem);
+            letter-spacing: 0.02em;
+            line-height: 1;
+            color: var(--navy);
+        }
+        .wordmark .hot { color: var(--red); }
+        .alarm-rule { height: 4px; background: var(--red); width: 100%; }
 
         .doc-header {
             border-bottom: 1px solid var(--gray-200);
@@ -91,7 +107,7 @@
         }
 
         .doc-title {
-            font-family: Georgia, serif;
+            font-family: var(--display);
             font-weight: 700;
             font-size: 2.75rem;
             line-height: 1.05;
@@ -123,7 +139,7 @@
         }
 
         h3.sub-h {
-            font-family: Georgia, serif;
+            font-family: var(--display);
             font-weight: 700;
             font-size: 0.9375rem;
             text-transform: uppercase;
@@ -133,7 +149,7 @@
         }
 
         p.body, .body p {
-            font-family: Georgia, serif;
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
             font-size: 1.0625rem;
             line-height: 1.65;
             color: var(--gray-900);
@@ -173,7 +189,7 @@
         }
 
         .item-title {
-            font-family: Georgia, serif;
+            font-family: var(--display);
             font-weight: 700;
             font-size: 0.8125rem;
             text-transform: uppercase;
@@ -196,7 +212,7 @@
         }
 
         .card-title {
-            font-family: Georgia, serif;
+            font-family: var(--display);
             font-weight: 700;
             font-size: 0.8125rem;
             text-transform: uppercase;
@@ -218,7 +234,7 @@
         }
 
         .callout-title {
-            font-family: Georgia, serif;
+            font-family: var(--display);
             font-weight: 700;
             font-size: 0.875rem;
             text-transform: uppercase;
@@ -259,7 +275,7 @@
         }
 
         .contact-box a {
-            font-family: Georgia, serif;
+            font-family: var(--display);
             font-weight: 700;
             font-size: 0.9375rem;
             text-transform: uppercase;
@@ -294,7 +310,7 @@
 
         .btn {
             display: inline-block;
-            font-family: Georgia, serif;
+            font-family: var(--display);
             font-weight: 700;
             font-size: 0.9375rem;
             padding: 0.75rem 1.5rem;
@@ -378,6 +394,14 @@
     </style>
 </head>
 <body>
+    <header class="masthead">
+        <a href="/" class="masthead-link" aria-label="House Conservatives — home">
+            <img src="/assets/hc-crest.png" alt="" role="presentation">
+            <div class="wordmark">HOUSE <span class="hot">CONSERVATIVES</span></div>
+        </a>
+    </header>
+    <div class="alarm-rule" role="presentation"></div>
+
     <header class="doc-header">
         <div class="doc-header-inner">
             <nav class="breadcrumb" aria-label="Breadcrumb">
