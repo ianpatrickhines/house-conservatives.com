@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Conservatives</title>
-    <meta name="description" content="House Conservatives funds the candidates and operations that keep a Republican House majority.">
+    <meta name="description" content="House Conservatives funds the candidates and operations that will take back the House majority in 2028.">
 
     <meta property="og:title" content="House Conservatives">
-    <meta property="og:description" content="House Conservatives funds the candidates and operations that keep a Republican House majority.">
+    <meta property="og:description" content="House Conservatives funds the candidates and operations that will take back the House majority in 2028.">
     <meta property="og:url" content="https://house-conservatives.com">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://house-conservatives.com/assets/hc-crest.png">
@@ -207,9 +207,111 @@
             margin-right: auto;
         }
 
+        /* ---- 2028 bands ---- */
+        .eyebrow {
+            font-family: var(--display);
+            font-size: 0.8125rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 1.25rem;
+        }
+
+        .band {
+            padding: 4rem 1.5rem;
+            border-top: 1px solid var(--rule);
+        }
+
+        .band.tint { background: var(--tint); }
+
+        .band .eyebrow { text-align: center; }
+
+        .band-inner { max-width: 940px; margin: 0 auto; }
+
+        .band h2 {
+            font-family: var(--display);
+            font-size: clamp(1.375rem, 3vw, 1.875rem);
+            line-height: 1.12;
+            letter-spacing: -0.01em;
+            color: var(--navy);
+            text-align: center;
+            max-width: min(26ch, 100%);
+            margin: 0 auto 2.5rem;
+            text-wrap: balance;
+        }
+
+        .band h2 .hot { color: var(--red); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+            gap: 1.25rem;
+        }
+
+        .card {
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-top: 4px solid var(--navy);
+            padding: 1.375rem 1.25rem 1.5rem;
+        }
+
+        .band.tint .card { border-top-color: var(--red); }
+
+        .card .tag {
+            font-family: var(--filing);
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            font-family: var(--display);
+            font-size: 1.0625rem;
+            line-height: 1.2;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            color: var(--slate);
+        }
+
+        .closer {
+            background: var(--navy-deep);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 1.5rem 4.25rem;
+        }
+
+        .closer h2 {
+            font-family: var(--display);
+            font-size: clamp(1.5rem, 3.4vw, 2.125rem);
+            line-height: 1.1;
+            max-width: min(22ch, 100%);
+            margin: 0 auto 1rem;
+            text-wrap: balance;
+        }
+
+        .closer h2 .hot { color: var(--alarm); }
+
+        .closer p {
+            color: #CFCBDA;
+            max-width: min(44ch, 100%);
+            margin: 0 auto 2rem;
+            line-height: 1.65;
+        }
+
+        .closer .secure { color: #B4AFC2; }
+
         @media (max-width: 640px) {
             .masthead { padding: 1.5rem 1.25rem 1.25rem; }
             main { padding: 3rem 1.25rem 3.5rem; }
+            .band { padding: 3rem 1.25rem; }
+            .closer { padding: 3rem 1.25rem 3.5rem; }
             .footer-links { gap: 1.25rem; }
             .btn { padding: 1rem 2.25rem; width: 100%; max-width: 320px; }
         }
@@ -223,15 +325,71 @@
     <div class="alarm-rule" role="presentation"></div>
 
     <main>
-        <h1>The House majority is the foundation of <span class="hot">every Republican win</span>.</h1>
+        <p class="eyebrow">Code Red &middot; 2028 starts now</p>
+        <h1>We&rsquo;re taking back <span class="hot">the House in 2028</span>.</h1>
         <div class="stub" role="presentation"></div>
         <p class="lede">
-            Without it, the Trump agenda dies in committee. House&nbsp;Conservatives funds the
-            candidates and operations that <strong>keep the Republican majority intact</strong>.
+            The House majority is the foundation of every Republican win. House&nbsp;Conservatives
+            funds the candidates and operations that will <strong>win the majority back</strong>.
         </p>
         <a class="btn" href="https://secure.winred.com/house-conservatives/">Contribute</a>
         <p class="secure">Processed securely through WinRed.</p>
     </main>
+
+    <section class="band" aria-labelledby="why-h">
+        <div class="band-inner">
+            <p class="eyebrow">Why the House</p>
+            <h2 id="why-h">A conservative House <span class="hot">gets things done</span>.</h2>
+            <div class="grid">
+                <article class="card">
+                    <p class="tag">Border</p>
+                    <h3>Secure the border</h3>
+                    <p>Fund the wall, back ICE and keep the border closed to cartels and traffickers.</p>
+                </article>
+                <article class="card">
+                    <p class="tag">Spending</p>
+                    <h3>Cut wasteful spending</h3>
+                    <p>Every spending bill must pass the House. A conservative majority guards your tax dollars.</p>
+                </article>
+                <article class="card">
+                    <p class="tag">Freedom</p>
+                    <h3>End the weaponization</h3>
+                    <p>Stop the use of government power against Americans for what they believe.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="band tint" aria-labelledby="plan-h">
+        <div class="band-inner">
+            <p class="eyebrow">The plan</p>
+            <h2 id="plan-h">Win the majority back, <span class="hot">district by district</span>.</h2>
+            <div class="grid">
+                <article class="card">
+                    <p class="tag">01 &middot; Back</p>
+                    <h3>Back real conservatives</h3>
+                    <p>Fund conservative fighters in every district we can win.</p>
+                </article>
+                <article class="card">
+                    <p class="tag">02 &middot; Build</p>
+                    <h3>Start early</h3>
+                    <p>Majorities are built early. We build the donors, data and operations now.</p>
+                </article>
+                <article class="card">
+                    <p class="tag">03 &middot; Win</p>
+                    <h3>Take back the House</h3>
+                    <p>We win it back, seat by seat, in November 2028.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="closer" aria-labelledby="close-h">
+        <h2 id="close-h">The 2028 majority <span class="hot">starts today</span>.</h2>
+        <p>Every seat counts. Stand with House Conservatives.</p>
+        <a class="btn" href="https://secure.winred.com/house-conservatives/">Contribute</a>
+        <p class="secure">Processed securely through WinRed.</p>
+    </section>
 
     <div class="alarm-rule" role="presentation"></div>
     <footer>
