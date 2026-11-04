@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Conservatives</title>
-    <meta name="description" content="House Conservatives funds the candidates and operations that keep a Republican House majority.">
+    <meta name="description" content="Speaker Jeffries takes the gavel January 3. House Conservatives funds the fight to hold the line and take the House majority back in 2028.">
 
     <meta property="og:title" content="House Conservatives">
-    <meta property="og:description" content="House Conservatives funds the candidates and operations that keep a Republican House majority.">
+    <meta property="og:description" content="Speaker Jeffries takes the gavel January 3. House Conservatives funds the fight to hold the line and take the House majority back in 2028.">
     <meta property="og:url" content="https://house-conservatives.com">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://house-conservatives.com/assets/hc-crest.png">
@@ -207,9 +207,109 @@
             margin-right: auto;
         }
 
+        /* ---- Minority-year bands (Nov 2026) ---- */
+        .eyebrow {
+            font-family: var(--display);
+            font-size: 0.8125rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 1.25rem;
+        }
+
+        .band {
+            padding: 4rem 1.5rem;
+            border-top: 1px solid var(--rule);
+        }
+
+        .band.tint { background: var(--tint); }
+
+        .band-inner { max-width: 940px; margin: 0 auto; }
+
+        .band h2 {
+            font-family: var(--display);
+            font-size: clamp(1.375rem, 3vw, 1.875rem);
+            line-height: 1.12;
+            letter-spacing: -0.01em;
+            color: var(--navy);
+            text-align: center;
+            max-width: min(26ch, 100%);
+            margin: 0 auto 2.5rem;
+            text-wrap: balance;
+        }
+
+        .band h2 .hot { color: var(--red); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+            gap: 1.25rem;
+        }
+
+        .card {
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-top: 4px solid var(--navy);
+            padding: 1.375rem 1.25rem 1.5rem;
+        }
+
+        .band.tint .card { border-top-color: var(--red); }
+
+        .card .tag {
+            font-family: var(--filing);
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            font-family: var(--display);
+            font-size: 1.0625rem;
+            line-height: 1.2;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            color: var(--slate);
+        }
+
+        .closer {
+            background: var(--navy-deep);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 1.5rem 4.25rem;
+        }
+
+        .closer h2 {
+            font-family: var(--display);
+            font-size: clamp(1.5rem, 3.4vw, 2.125rem);
+            line-height: 1.1;
+            max-width: min(22ch, 100%);
+            margin: 0 auto 1rem;
+            text-wrap: balance;
+        }
+
+        .closer h2 .hot { color: var(--alarm); }
+
+        .closer p {
+            color: #CFCBDA;
+            max-width: min(44ch, 100%);
+            margin: 0 auto 2rem;
+            line-height: 1.65;
+        }
+
+        .closer .secure { color: #B4AFC2; }
+
         @media (max-width: 640px) {
             .masthead { padding: 1.5rem 1.25rem 1.25rem; }
             main { padding: 3rem 1.25rem 3.5rem; }
+            .band { padding: 3rem 1.25rem; }
+            .closer { padding: 3rem 1.25rem 3.5rem; }
             .footer-links { gap: 1.25rem; }
             .btn { padding: 1rem 2.25rem; width: 100%; max-width: 320px; }
         }
@@ -223,15 +323,77 @@
     <div class="alarm-rule" role="presentation"></div>
 
     <main>
-        <h1>The House majority is the foundation of <span class="hot">every Republican win</span>.</h1>
+        <p class="eyebrow">Code Red &middot; Democrats won the House</p>
+        <h1>Jeffries gets the gavel. <span class="hot">Conservatives hold the line.</span></h1>
         <div class="stub" role="presentation"></div>
         <p class="lede">
-            Without it, the Trump agenda dies in committee. House&nbsp;Conservatives funds the
-            candidates and operations that <strong>keep the Republican majority intact</strong>.
+            On January&nbsp;3, Hakeem Jeffries becomes Speaker. With Chuck Schumer running the Senate,
+            the House conservatives in the minority are the front line. House&nbsp;Conservatives funds
+            the fight to <strong>stop Jeffries&rsquo; agenda and take the majority back in 2028</strong>.
         </p>
         <a class="btn" href="https://secure.winred.com/house-conservatives/">Contribute</a>
         <p class="secure">Processed securely through WinRed.</p>
     </main>
+
+    <section class="band" aria-labelledby="gavel-h">
+        <div class="band-inner">
+            <p class="eyebrow" style="text-align:center">What the gavel gives them</p>
+            <h2 id="gavel-h">Speaker Jeffries controls <span class="hot">everything the House does</span>.</h2>
+            <div class="grid">
+                <article class="card">
+                    <p class="tag">The floor</p>
+                    <h3>What gets a vote</h3>
+                    <p>The Speaker decides which bills reach the floor. Conservative bills can be buried without a vote.</p>
+                </article>
+                <article class="card">
+                    <p class="tag">The committees</p>
+                    <h3>Every chairman&rsquo;s gavel</h3>
+                    <p>Democrat chairmen will set the hearings and send the subpoenas. Expect them to go after President&nbsp;Trump.</p>
+                </article>
+                <article class="card">
+                    <p class="tag">The purse</p>
+                    <h3>Every spending bill</h3>
+                    <p>Every spending bill must pass the House. The money for the border, ICE and our military now runs through Jeffries.</p>
+                </article>
+                <article class="card">
+                    <p class="tag">Impeachment</p>
+                    <h3>The power to impeach</h3>
+                    <p>Impeachment starts in the House. A Democrat majority can open it with a simple majority vote.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="band tint" aria-labelledby="plan-h">
+        <div class="band-inner">
+            <p class="eyebrow" style="text-align:center">The plan</p>
+            <h2 id="plan-h">Hold the line now. <span class="hot">Win the House back in 2028.</span></h2>
+            <div class="grid">
+                <article class="card">
+                    <p class="tag">01 &middot; Hold</p>
+                    <h3>Stand up to Speaker Jeffries</h3>
+                    <p>Back the House conservatives who vote no on the Jeffries agenda, every time.</p>
+                </article>
+                <article class="card">
+                    <p class="tag">02 &middot; Expose</p>
+                    <h3>Make them own every vote</h3>
+                    <p>Put the Democrats&rsquo; record in front of voters in the districts they flipped.</p>
+                </article>
+                <article class="card">
+                    <p class="tag">03 &middot; Retake</p>
+                    <h3>Take the majority back</h3>
+                    <p>The House is won seat by seat. The fight for 2028 starts now, not in two years.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="closer" aria-labelledby="close-h">
+        <h2 id="close-h">The 2028 majority <span class="hot">starts today</span>.</h2>
+        <p>Every seat we take back is one less vote for Speaker Jeffries. Stand with House Conservatives.</p>
+        <a class="btn" href="https://secure.winred.com/house-conservatives/">Contribute</a>
+        <p class="secure">Processed securely through WinRed.</p>
+    </section>
 
     <div class="alarm-rule" role="presentation"></div>
     <footer>
